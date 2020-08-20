@@ -24,11 +24,11 @@ public:
             first=temp;
         }
     }
-    void create()
+    void insertlast()
 {
-        char ch;
-        do
-        {
+    char ch;
+    do
+    {
         struct node* head=new node;
         cout<<"\nEnter data to be entered in the list ";
         cin>>head->info;
@@ -38,23 +38,14 @@ public:
             first=head;
             last=head;
         }
-        else
+    else
         {
             last->ptr=head;
             last=head;
         }
-        cout<<"\nWant to enter more ?? ";
+        cout<<"\n want to enter more ??";
         cin>>ch;
-    }while(ch=='Y'||ch=='y');
-}
-void insertlast()
-{
-    struct node* head=new node;
-    cout<<"\nEnter data to be inserted ";
-    cin>>head->info;
-    head->ptr=NULL;
-    last->ptr=head;
-    last=head;
+    }while(ch=='y'||ch=='Y');
 }
 void insertfirst()
 {
@@ -202,48 +193,44 @@ void reverselist()
         int n;
         do
         {
-            cout<<"\n1.Create a linked list";
-            cout<<"\n2.Insert Element at end";
-            cout<<"\n3.Insert Element at begining";
-            cout<<"\n4.Insert at position";
-            cout<<"\n5.Delete from End";
-            cout<<"\n6.Delete from begining";
-            cout<<"\n7.Delete from position";
-            cout<<"\n8.Reverse list";
-            cout<<"\n9.Search Element";
-            cout<<"\n10.Display linked list";
+            cout<<"\n1.Insert Element at end";
+            cout<<"\n2.Insert Element at begining";
+            cout<<"\n3.Insert at position";
+            cout<<"\n4.Delete from End";
+            cout<<"\n5.Delete from begining";
+            cout<<"\n6.Delete from position";
+            cout<<"\n7.Reverse list";
+            cout<<"\n8.Search Element";
+            cout<<"\n9.Display linked list";
             cout<<"\nEnter Choice ";
             cin>>n;
             switch(n)
 	{
 		case 1 :
-			a1.create();
-			break;
-		case 2 :
 			a1.insertlast();
 			break;
-		case 3 :
+		case 2 :
 			a1.insertfirst();
 			break;
-		case 4 :
+		case 3 :
 			a1.insertpos();
 			break;
-		case 5 :
+		case 4 :
 			a1.delend();
-		case 6 :
+		case 5 :
 			a1.delbegin();
 			break;
-		case 7 :
+		case 6 :
 			a1.delpos();
 			break;
-		case 8 :
+		case 7 :
 			a1.reverselist();
 			a1.display();
 			break;
-        case 9 :
+        case 8 :
             a1.searchlist();
             break;
-        case 10 :
+        case 9 :
             a1.display();
             break;
 	}
