@@ -61,9 +61,9 @@ int main()
                     break;
                 default:
                     cout<<"\nInvalid Choice";
-                    cout<<"\nWant to continue? ";
-                    cin>>ch;
             }
+        cout<<"\nWant to continue? ";
+        cin>>ch;
         }while(ch=='y'||ch=='Y');
    return 0;
 }
