@@ -2,7 +2,7 @@
 using namespace std;
 
 int ar[25],size,front= - 1,rear = - 1;
-void Insert(int x)
+void enqueue(int x)
 {
    if (rear==size-1)
    cout<<"\nOverflow"<<endl;
@@ -14,7 +14,7 @@ void Insert(int x)
       ar[rear]=x;
    }
 }
-void Delete() {
+void Dequeue() {
    if (front==-1||front>rear)
     {
       cout<<"\nUnderflow ";
@@ -43,8 +43,8 @@ int main()
    char ch;
    cout<<"\nEnter Size of queue ";
    cin>>size;
-   cout<<"1) Insert"<<endl;
-   cout<<"2) Delete"<<endl;
+   cout<<"1) enqueue"<<endl;
+   cout<<"2) Dequeue"<<endl;
    cout<<"3) Display"<<endl;
    do {
       cout<<"\nEnter choice: ";
@@ -54,10 +54,10 @@ int main()
          case 1:
              cout<<"\nEnter value to be entered in queue ";
              cin>>a;
-             Insert(a);
+             enqueue(a);
          break;
          case 2:
-             Delete();
+             Dequeue();
              break;
          case 3:
              Display();
