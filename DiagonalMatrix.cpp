@@ -23,16 +23,20 @@ public:
 	 void input(int val,int i,int j)
 	 {
 	     if(i!=j && val!=0)
+	     {
 		cout<<"\nReplaced by 0";
-	else if(i==j)
+	     }
+	     else if(i==j)
+	     {
 		ar[i]=val;
+	     }
 	 }
 	 int getvalue(int i,int j)
 	 {
 	     if (i==j)
-        {
-             return ar[i];
-        }
+	     {
+		return ar[i];
+	     }
         else
         {
             return 0;
