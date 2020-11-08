@@ -23,7 +23,7 @@ public:
 	 void input(int val,int i,int j)
 	 {
 	     if(i!=j && val!=0)
-		cout<<"\nMust be zero";
+		cout<<"\nReplaced by 0";
 	else if(i==j)
 		ar[i]=val;
 	 }
