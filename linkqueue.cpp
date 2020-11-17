@@ -8,7 +8,6 @@ struct node
 };
 struct node* front = NULL;
 struct node* rear = NULL;
-struct node* head;
 void enqueue(int x)
 {
    if (rear==NULL)
