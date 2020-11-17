@@ -13,11 +13,15 @@ void enqueue(int x)
 {
    if (rear==NULL)
     {
-      rear->info=x;
-      front=rear;
+      struct node* head=new node;
+      head->info=x;
+      head->next=NULL;
+      front=head;
+      rear=head;
    }
    else
     {
+      struct node* head=new node;
       rear->next=head;
       head->info=x;
       head->next=NULL;
@@ -30,7 +34,7 @@ void dequeue()
     {
       cout<<"\nUnderflow";
     }
-   else if(head=rear)
+   else if(head==rear)
     {
       cout<<front->info<<" deleted\n";
       front=NULL;
@@ -38,10 +42,10 @@ void dequeue()
     }
    else
     {
-        head=head->next;
-        cout<<front->info<<" deleted\n";
-        delete front;
-        front=head;
+        head=front;
+        front=front->next;
+        cout<<head->info<<" deleted\n";
+        delete head;
     }
 }
 void Display()
@@ -68,8 +72,8 @@ int main()
    do
     {
       cout<<"\nEnter your choice: "<<endl;
-      cin>>ch;
-      switch (ch)
+      cin>>n;
+      switch (n)
       {
          case 1:
              cout<<"\nEnter value to be entered in queue "<<endl;
